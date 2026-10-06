@@ -85,3 +85,7 @@ The APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
 | `Prefs.kt` | Saved settings |
 | `Contrast.kt` | WCAG contrast maths for automatic text colours |
 | `TimeWheel.kt`, `ColorPickerView.kt` | Scroll-wheel time picker and colour picker |
+
+## License
+
+[GNU General Public License v3.0](LICENSE). You can use, change and share this app, but any modified version you release must also be open source under the GPL-3.0.
