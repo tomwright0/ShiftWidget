@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Shift Widget</string>
+    <string name="widget_month_name">Shifts – Month</string>
+    <string name="widget_upcoming_name">Shifts – Upcoming</string>
+    <string name="widget_month_description">Month calendar showing your Google Calendar shifts</string>
+    <string name="widget_upcoming_description">Your next few days of shifts with times</string>
+    <string name="day_off">OFF</string>
+</resources>
