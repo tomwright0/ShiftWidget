@@ -7,6 +7,7 @@ A free, open-source Android calendar app and home-screen widget for shift worker
 I used **MyShiftPlanner** for its home-screen widget, but it was a poor fit:
 
 - **It isn't a real calendar app.** Shifts live in their own separate world instead of in your actual calendar. Nothing you add there shows up in Google Calendar, and your other appointments don't sit next to your shifts.
+- **No real appointments.** All you can add to a day is a "note". There are no proper events with times, so you can't use it to track appointments.
 - **You have to pay for everything.** Widget colours, transparency, layouts: almost every useful option is locked behind a purchase or subscription.
 
 My shifts were already in Google Calendar, with their own colours. All I wanted was a nice widget that shows them, plus a quick way to jot notes onto days. So I built this. It is a small, normal calendar app that reads and writes the calendars already on your phone, with the widget I wanted. All features are free.
