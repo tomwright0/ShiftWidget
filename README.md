@@ -35,8 +35,19 @@ My shifts were already in Google Calendar, with their own colours. All I wanted 
 - **No Google sign-in or API keys.** The app uses Android's built-in calendar database ([`CalendarContract`](https://developer.android.com/reference/android/provider/CalendarContract)). Any account synced to your phone (Google, Samsung, Outlook…) is already there. The app only asks for calendar permission.
 - **Reading:** events are read from the phone's calendar database. Widgets redraw automatically when the calendar changes, at midnight, and every 30 minutes as a backup.
 - **Writing:** notes are inserted into the calendar you choose (by default your main Google calendar). Android's own sync then uploads them to Google Calendar, and the app asks for that sync straight away.
-- **Shifts** are recognised by title (any event containing "shift" by default; you can mark others as shifts in Settings). The shift's colour comes from Google Calendar unless you override it in the app. In-app overrides change only how the app shows the shift; they don't change Google Calendar.
 - Calendars added to Google Calendar **"from URL"** are refreshed by Google's servers every few hours. "Sync now" fetches whatever Google already has.
+
+## How shifts are detected
+
+The app doesn't keep its own list of shifts. It finds them in your Google Calendar events:
+
+- **What it looks for:** any event whose **title contains the word "shift"** (any capitals), e.g. `Day Shift`, `Night Shift`, `Late shift`. All-day and timed events both count.
+- **Other names:** if your shifts are called something else (e.g. `Earlies`, `Work`), open **Settings → Shift colours**, tap the event and turn on **This is a shift**. You can also turn it off for an event that contains "shift" but isn't one.
+- **Colour:** the coloured block behind the date in the Upcoming widget uses the event's **colour from Google Calendar**. To use a different colour in the app only, set an override in **Settings → Shift colours**. Overrides don't change Google Calendar.
+- **Days with no shift** show a black **OFF** block.
+- **Short labels are set in the app, not in Google.** The Google event title is used as-is (e.g. "Day Shift"), unless you give it a short label in **Settings → Shift colours**, e.g. "Day Shift" → "Day" and "Night Shift" → "Night". The labels are stored only on your phone, so your Google Calendar keeps the full titles.
+- **Protected:** shifts can't be edited or deleted from the app's day view, so you won't change your roster by accident. Edit them in Google Calendar.
+- If a day has more than one shift event, the first one sets the colour and the rest show underneath like other events.
 
 ## Install
 
